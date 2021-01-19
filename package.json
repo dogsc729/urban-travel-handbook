@@ -5,10 +5,6 @@
   "author": "dogsc729 <b07611033@ntu.edu.tw>",
   "license": "MIT",
   "scripts": {
-    "start": "cd frontend && yarn start",
-    "server": "cd backend && yarn server"
-  },
-  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
