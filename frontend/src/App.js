@@ -59,7 +59,7 @@ function App() {
     </div>
   )
 
-  return <div className="App">{startPage}</div>
+  return <div className="App">{finalPage}</div>
 }
 
 export default App;
