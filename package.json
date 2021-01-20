@@ -4,12 +4,15 @@
   "main": "index.js",
   "author": "dogsc729 <b07611033@ntu.edu.tw>",
   "license": "MIT",
+  "homepage": "https://dogsc729.github.io/1091ntueewebprog_group24/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon"
+    "server": "nodemon",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
