@@ -180,10 +180,9 @@ function App() {
           ))
         }
       </div>
-      <div className = "GoogleMap">
+      <div className="GoogleMap">
         <SimpleMap />
       </div>
-      <button onClick={async () => await console.log(messages)}>fuck</button>
     </div >
   )
   if (page === 0) {
