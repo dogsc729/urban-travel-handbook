@@ -151,11 +151,11 @@ function App() {
         <div className="tp">
           <div className="typename">
             <h1>景點</h1>
-            <button type="button" onClick={async () => { await setpage(3); settype("景點"); }}><img className="type" src={tour} alt="" /></button>
+            <button type="button" onClick={async () => { await setpage(3); settype("行"); }}><img className="type" src={tour} alt="" /></button>
           </div>
           <div className="typename">
             <h1>籃球場</h1>
-            <button type="button" onClick={async () => { await setpage(3); settype("籃球場"); }}><img className="type" src={basket} alt="" /></button>
+            <button type="button" onClick={async () => { await setpage(3); settype("球場"); }}><img className="type" src={basket} alt="" /></button>
           </div>
         </div>
         <button onClick={async () => { await setpage(1) }}>回到上一頁</button>
@@ -180,6 +180,7 @@ function App() {
       <div className = "GoogleMap">
         <SimpleMap />
       </div>
+      <button onClick={async()=>await console.log(messages)}>fuck</button>
     </div >
   )
   if (page === 0) {
