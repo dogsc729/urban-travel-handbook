@@ -28,6 +28,7 @@ function App() {
   const lats = [0, 25.0466852, 25.046146, 25.005998, 24.1515062, 22.995732, 22.6508225]
   const lngs = [0, 121.5419117, 121.5282649, 121.3105929, 120.6827387, 120.2347414, 120.3146344]
   const zooms = [0, 13, 13, 12, 12.5, 13.5, 13.96]
+
   class SimpleMap extends Component {
     static defaultProps = {
       center: {
@@ -40,7 +41,7 @@ function App() {
     render() {
       return (
         // Important! Always set the container height explicitly
-        <div style={{ height: '100vh', width: '1000%',position:"relative" }}>
+        <div style={{ height: '100vh', width: '1000%', position: "relative" }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: Key }}
             defaultCenter={this.props.center}
@@ -159,7 +160,7 @@ function App() {
             <button type="button" onClick={async () => { await setpage(3); settype("球場"); }}><img className="type" src={basket} alt="" /></button>
           </div>
         </div>
-        
+
       </div>
     </>
   )
@@ -169,6 +170,7 @@ function App() {
     <div>
       <h1>{cityname}/{typename}</h1>
       <button onClick={async () => { await setpage(2) }}>回到上一頁</button>
+      <p>推薦清單 : </p>
       <div className="App-messages">
         {
           filter.map(({ name, type, city, reference }, i) => (
@@ -181,7 +183,7 @@ function App() {
       <div className = "GoogleMap">
         <SimpleMap />
       </div>
-      <button onClick={async()=>await console.log(messages)}>fuck</button>
+      <button onClick={async () => await console.log(messages)}>fuck</button>
     </div >
   )
   if (page === 0) {
