@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/1091ntueewebprog_group24/static/css/main.f5800f14.chunk.css",
+    "main.js": "/1091ntueewebprog_group24/static/js/main.d9ef6181.chunk.js",
+    "main.js.map": "/1091ntueewebprog_group24/static/js/main.d9ef6181.chunk.js.map",
+    "runtime-main.js": "/1091ntueewebprog_group24/static/js/runtime-main.fe300907.js",
+    "runtime-main.js.map": "/1091ntueewebprog_group24/static/js/runtime-main.fe300907.js.map",
+    "static/js/2.4b3124f7.chunk.js": "/1091ntueewebprog_group24/static/js/2.4b3124f7.chunk.js",
+    "static/js/2.4b3124f7.chunk.js.map": "/1091ntueewebprog_group24/static/js/2.4b3124f7.chunk.js.map",
+    "static/js/3.456ea0d5.chunk.js": "/1091ntueewebprog_group24/static/js/3.456ea0d5.chunk.js",
+    "static/js/3.456ea0d5.chunk.js.map": "/1091ntueewebprog_group24/static/js/3.456ea0d5.chunk.js.map",
+    "index.html": "/1091ntueewebprog_group24/index.html",
+    "static/css/main.f5800f14.chunk.css.map": "/1091ntueewebprog_group24/static/css/main.f5800f14.chunk.css.map",
+    "static/js/2.4b3124f7.chunk.js.LICENSE.txt": "/1091ntueewebprog_group24/static/js/2.4b3124f7.chunk.js.LICENSE.txt",
+    "static/media/kaohsiung.6d33f247.png": "/1091ntueewebprog_group24/static/media/kaohsiung.6d33f247.png",
+    "static/media/new taipei.ed81705b.png": "/1091ntueewebprog_group24/static/media/new taipei.ed81705b.png",
+    "static/media/taichung.9dfcecfc.png": "/1091ntueewebprog_group24/static/media/taichung.9dfcecfc.png",
+    "static/media/tainan.da9c6e95.png": "/1091ntueewebprog_group24/static/media/tainan.da9c6e95.png",
+    "static/media/taipei.f6f243c1.png": "/1091ntueewebprog_group24/static/media/taipei.f6f243c1.png",
+    "static/media/taiwan_map.ba0a8c30.png": "/1091ntueewebprog_group24/static/media/taiwan_map.ba0a8c30.png",
+    "static/media/taoyuan.a5a55103.png": "/1091ntueewebprog_group24/static/media/taoyuan.a5a55103.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fe300907.js",
+    "static/js/2.4b3124f7.chunk.js",
+    "static/css/main.f5800f14.chunk.css",
+    "static/js/main.d9ef6181.chunk.js"
+  ]
+}
