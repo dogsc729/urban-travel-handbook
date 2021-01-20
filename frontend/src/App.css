@@ -20,12 +20,31 @@
   font-size: 3em;
 }
 
-.App-messages {
-  width: 100%;
-  height: 300px;
-  background: #eeeeee52;
-  border-radius: 10px;
-  margin: 20px;
-  padding: 20px;
-  overflow: auto;
+.background {
+  justify-content: center;
+  /* horizontally center */
+}
+.city{
+  display:flex;
+  align-items: center;
+  justify-content: center
+}
+.cityname{
+  margin:10px;
+}
+.img{
+  width:250px;
+  height:353px;
+}
+.type{
+  width:300px;
+  height:300px;
+}
+.tp{
+  display:flex;
+  align-items: center;
+  justify-content: center
+}
+.typename{
+  margin:10px;
 }
