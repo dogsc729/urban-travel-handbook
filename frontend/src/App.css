@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 125vh;
+  height: 200vh;
   width: 500px;
   margin: auto;
 }
@@ -47,4 +47,13 @@
 }
 .typename{
   margin:10px;
+}
+.GoogleMap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 125vh;
+  width: 500px;
+  margin: auto;
 }

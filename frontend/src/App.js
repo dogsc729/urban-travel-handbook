@@ -40,7 +40,7 @@ function App() {
     render() {
       return (
         // Important! Always set the container height explicitly
-        <div style={{ height: '100vh', width: '200%', position: "relative" }}>
+        <div style={{ height: '100vh', width: '1000%',position:"relative" }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: Key }}
             defaultCenter={this.props.center}
@@ -177,7 +177,7 @@ function App() {
           ))
         }
       </div>
-      <div className="App">
+      <div className = "GoogleMap">
         <SimpleMap />
       </div>
     </div >
