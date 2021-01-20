@@ -14,17 +14,56 @@ import food from "./images/food.png"
 import hotel from "./images/hotel.png"
 import basket from "./images/basket.jpeg"
 import tour from "./images/tour.jpeg"
+import React, { Component } from 'react'
+import GoogleMapReact from 'google-map-react'
 
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const Key = "AIzaSyBT92vSGssAdIl7g-JDd3joI_0n9z_QN1M"
+// Map
 
 function App() {
+  const [mylat, setmylat] = useState(0)
+  const [mylng, setmylng] = useState(0)
+  const [myzoom, setmyzoom] = useState(10)
+  const lats = [0, 25.0466852, 25.046146, 25.005998, 24.1515062, 22.995732, 22.6508225]
+  const lngs = [0, 121.5419117, 121.5282649, 121.3105929, 120.6827387, 120.2347414, 120.3146344]
+  const zooms = [0, 13, 13, 12, 12.5, 13.5, 13.96]
+  class SimpleMap extends Component {
+    static defaultProps = {
+      center: {
+        lat: mylat,
+        lng: mylng
+      },
+      zoom: myzoom
+    };
+
+    render() {
+      return (
+        // Important! Always set the container height explicitly
+        <div style={{ height: '100vh', width: '200%', position: "relative" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: Key }}
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+          >
+            <AnyReactComponent
+              lat={mylat}
+              lng={mylng}
+              text="My Marker"
+            />
+          </GoogleMapReact>
+        </div>
+      );
+    }
+  }
   //const [start, setstart] = useState(false)
   //const [selectcity, setselectcity] = useState(false)//選擇城市與否
   //const [selecttype, setselecttype] = useState(false)//選擇種類與否
-  const [type, settype] = useState("default")//種類為何？
-  const [city, setcity] = useState("default")
+  const [typename, settype] = useState("default")//種類為何？
+  const [cityname, setcity] = useState("default")
   const [page, setpage] = useState(0)
-  const [typename, settypename] = useState("default")
-  const [cityname, setcityname] = useState("default")
+  //const [typename, settypename] = useState("default")
+  //const [cityname, setcityname] = useState("default")
   const { status, opened, messages } = Display()
   //起始畫面
   const startPage = (
@@ -45,24 +84,30 @@ function App() {
     <>
       <div>
         <h1>WELCOME TO TAIWAN</h1>
-        <select onChange={async (e) => { await setpage(2); setcity(e.target.options[e.target.options.selectedIndex].value); }}>
+        <select onChange={async (e) => {
+          await setpage(2);
+          setcity(e.target.options[e.target.options.selectedIndex].value);
+          setmylat(lats[e.target.options.selectedIndex]);
+          setmylng(lngs[e.target.options.selectedIndex]);
+          setmyzoom(zooms[e.target.options.selectedIndex])
+        }}>
           <option value="select">select a city</option>
-          <option value="臺北">臺北</option>
+          <option value="台北">台北</option>
           <option value="新北">新北</option>
           <option value="桃園">桃園</option>
-          <option value="臺中">臺中</option>
-          <option value="臺南">臺南</option>
+          <option value="台中">台中</option>
+          <option value="台南">台南</option>
           <option value="高雄">高雄</option>
         </select>
         <button onClick={async () => { await setpage(0) }}>回到上一頁</button>
       </div>
       <div className="city">
         <div className="cityname">
-          <h1>臺北市</h1>
+          <h1>台北市</h1>
           <img src={taipei} alt="" />
         </div>
         <div className="cityname">
-          <h1>臺南市</h1>
+          <h1>台南市</h1>
           <img src={tainan} alt="" />
         </div>
         <div className="cityname">
@@ -72,7 +117,7 @@ function App() {
       </div>
       <div className="city">
         <div className="cityname">
-          <h1>臺中市</h1>
+          <h1>台中市</h1>
           <img className="img" src={taichung} alt="" />
         </div>
         <div className="cityname">
@@ -90,7 +135,7 @@ function App() {
   const selecttypePage = (
     <>
       <div>
-        <h1>{city}</h1>
+        <h1>{cityname}</h1>
       </div>
       <div>
         <div className="tp">
@@ -118,14 +163,11 @@ function App() {
     </>
   )
   //逛圖片的畫面
-  const filter = messages.filter(function (messages, typename, cityname) { return messages.type === "行" && messages.city === "桃園" })
+  const filter = messages.filter(function (messages) { return messages.type === typename && messages.city === cityname })
   const finalPage = (
     <div>
-      <h1>{city}/{type}</h1>
-      <p>fuck</p>
-      <a href='/'>幹你娘</a>
-      <button>上一張</button>
-      <button>下一張</button>
+      <h1>{cityname}/{typename}</h1>
+      <button onClick={async () => { await setpage(2) }}>回到上一頁</button>
       <div className="App-messages">
         {
           filter.map(({ name, type, city, reference }, i) => (
@@ -135,7 +177,10 @@ function App() {
           ))
         }
       </div>
-    </div>
+      <div className="App">
+        <SimpleMap />
+      </div>
+    </div >
   )
   if (page === 0) {
     return <div className="App" >{startPage}</div>
