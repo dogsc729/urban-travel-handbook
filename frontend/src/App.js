@@ -136,6 +136,7 @@ function App() {
     <>
       <div>
         <h1>{cityname}</h1>
+        <button onClick={async () => { await setpage(1) }}>回到上一頁</button>
       </div>
       <div>
         <div className="tp">
@@ -158,7 +159,7 @@ function App() {
             <button type="button" onClick={async () => { await setpage(3); settype("球場"); }}><img className="type" src={basket} alt="" /></button>
           </div>
         </div>
-        <button onClick={async () => { await setpage(1) }}>回到上一頁</button>
+        
       </div>
     </>
   )
