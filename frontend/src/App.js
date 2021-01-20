@@ -2,6 +2,8 @@ import './App.css';
 import { useState } from 'react'
 import { startPage, selectcityPage, selecttypePage, choosingPage } from './axios';
 import background from "./images/taiwan_map.png";
+import { Button, Input, message, Tag } from 'antd'
+import Display from './display'
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
   const [selectcity, setselectcity] = useState(false)//選擇城市與否
   const [selecttype, setselecttype] = useState(false)//選擇種類與否
   const [type, settype] = useState("default")//種類為何？
+  const { status, opened, messages } = Display()
   //起始畫面
   const startPage = (
     <div>
@@ -49,6 +52,7 @@ function App() {
     </div>
   )
   //逛圖片的畫面
+  const filter = messages.filter(function(messages){return messages.type ==="球場"})
   const finalPage = (
     <div>
       <h1>{type}</h1>
@@ -56,6 +60,15 @@ function App() {
       <a href='/'>幹你娘</a>
       <button>上一張</button>
       <button>下一張</button>
+      <div className="App-messages">
+        {
+          filter.map(({ name, type, city, reference }, i) => (
+            <p className="App-message" key={i}>
+              <Tag color="blue">{name}</Tag> <Tag color="red">{type}</Tag> <Tag color="red">{city}</Tag> {reference}
+            </p>
+          ))
+        }
+      </div>
     </div>
   )
 
