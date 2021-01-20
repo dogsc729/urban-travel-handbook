@@ -6,8 +6,16 @@ const MessageSchema = new Schema({
 	name: {
 		type: String,
 		required: [true, 'Name field is required.']
+    },
+    city: {
+		type: String,
+		required: [true, 'Body field is required.']
+    },
+    type: {
+		type: String,
+		required: [true, 'Body field is required.']
 	},
-	body: {
+	reference: {
 		type: String,
 		required: [true, 'Body field is required.']
 	}
