@@ -113,6 +113,33 @@
     ```
 ## Reference
 *   GoogleMap API
+    ```
+    class SimpleMap extends Component {
+    static defaultProps = {
+      center: {
+        lat: mylat,
+        lng: mylng
+      },
+      zoom: myzoom
+    };
+    render() {
+      return (
+        <div style={{ height: '100vh', width: '1000%', position: "relative" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: Key }}
+            defaultCenter={this.props.center}
+            defaultZoom={this.props.zoom}
+          >
+            <AnyReactComponent
+              lat={mylat}
+              lng={mylng}
+              text="My Marker"
+            />
+          </GoogleMapReact>
+        </div>
+      );
+    }
+    ```
 
 
 
