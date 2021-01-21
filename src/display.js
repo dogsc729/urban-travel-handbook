@@ -2,7 +2,7 @@ import { useState } from 'react'
 // import { w3cwebsocket as W3CWebSocket } from 'websocket'
 
 // const client = new W3CWebSocket('ws://localhost:4000')
-const client = new WebSocket('ws://localhost:4000')//WS server URL(client side)
+const client = new WebSocket('ws://localhost:80')//WS server URL(client side)
 
 const Display = () => {
   const [messages, setMessages] = useState([])
