@@ -14,7 +14,7 @@
     使用/操作方式：
     首先先選擇自己想要去的首都，接下來再點選自己所欲前往首都的行為模式（食住行球場，
     另外也可以配合googlemap來規劃自己的路線。
-## Usage
+#### Usage
 ### Local
 * Overall
 
@@ -30,7 +30,7 @@
 
 * Get Started
 
-    - Press `Start your trip!`
+    - Press `Start Your Trip!`
     ![](https://i.imgur.com/d225d07.png)
 
 * Choose a city
@@ -46,7 +46,7 @@
 * Get informations you need!
 
     ![](https://i.imgur.com/BlNSy8Q.png)
-    
+
 ## 相關技術
 * Frontend
     - react
