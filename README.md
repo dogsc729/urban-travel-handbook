@@ -14,110 +14,14 @@ git clone https://github.com/jill880829/Skrik
 ```
 * Overall
 
-- simply run `yarn` to install packages.
+    - simply run `yarn` to install packages.
 
 * Backend
 
-    -  `backend/.env` first, there exists `backend/.env.example` for you to specify it
-    - connect to database on cloud
-    You need to be the IAM user in our GCP project, or you have to build your own database
-        ```bash=
-        # install and set gcloud info
-        install gcloud (find steps from web!!)
-        gcloud components install kubectl
-        gcloud init
-        gcloud auth login
-        gcloud config set project skrik-299012
-        gcloud container clusters get-credentials skrik-taiwan        
+    - run `yarn server` under the main directory 
 
-        # port forwarding the database
-        kubectl get pods  (check mongo and redis pod name)
-        kubectl port-forward <pod-name> [port]:[port]
-        
-        #docker ports:
-        mongo:           27017
-        mongo-express:   8081
-        redis:           6379
-
-        ```
-    - Run backend server
-        ```bash=
-        make backend_yarn
-        ```
-        or ...
-        
-        ```bash=
-        make backend
-        ```
 * Frontend
-    - Run frontend react
-        ```bash=
-        cd Skrik/frontend/
-        yarn
-        yarn start
-        ```
-### Deployment
-You need to be the IAM user in our GCP project, or you have to create GCP project and config your IAM users first
-* Get certificate (using letsencrypt)
-```bash=
-make cert
-sudo make cert_fetch
-```
-* Apply secrets(cert, passwords) to kubernetes
-```bash=
-# deploy the secret in .env
-make deploy_db_conf
-make deploy_redis_conf
-make deploy_backend_conf
-make cert_deploy
-```
-* Build docker and push to remote repo
-```bash=
-make deploy_db_build
-make deploy_backend_build
-make deploy_frontend_build
-```
-* Deploy storage services
-```bash=
-# claim persistant volume for db service
-kubectl apply -f ./deployment/k8s/databae/mongo-pvc.yaml
-kubectl apply -f ./deployment/k8s/databae/redis-pvc.yaml
-
-#deploy instance
-kubectl apply -f ./deployment/k8s/databae/mongo.yaml
-kubectl apply -f ./deployment/k8s/databae/redis.yaml
-```
-* Deploy web service
-```bash=
-# backend configs
-kubectl apply -f ./deployment/k8s/server/backend-conf.yaml
-
-#deploy backend
-kubectl apply -f ./deployment/k8s/server/backend.yaml
-#deploy frontend
-kubectl apply -f ./deployment/k8s/server/frontend.yaml
-```
-* Network issue
-```bash=
-# deploy nginx
-kubectl apply -f ./deployment/k8s/network/nginx-service-conf.yaml
-kubectl apply -f ./deployment/k8s/network/nginx-conf.yaml
-kubectl apply -f ./deployment/k8s/network/nginx.yaml
-kubectl apply -f ./deployment/k8s/network/nginx-service.yaml
-
-# deploy ingress, need to reserve static IP first
-kubectl apply -f ./deployment/k8s/ingress/ingress.yaml
-```
-* Restart service
-```bash=
-# rollout existed docker and restart
-kubectl rollout restart statefulset mongo
-kubectl rollout restart statefulset redis
-kubectl rollout restart deployment frontend 
-kubectl rollout restart deployment backend
-kubectl rollout restart deployment nginx
-```
-
+    - run `yarn start` under the main directory
 ## Dependency
 ### Backend
 ```json=
@@ -160,12 +64,6 @@ kubectl rollout restart deployment nginx
 "styled-components": "5.1.0",            <!-- css tools-->
 "web-vitals": "^0.2.4"
 ```
-## Our Thought About Skrik
-After finishing this project, we really admire those who construct google doc and HackMD. We spent almost 4 days dealing with synchronizing all cursors and correctly displaying the texts. What's more adding cursors into texts by CodeMirror and preventing them collapsing into same position are both disasters. To further improve Skrik, the speed of DB access is significant. In the current version, DB access is the limit of the fluency, which may cause a long wait when refreshing the data. Still racing conditions should be more thoroughly taken into considerations.
-
-We have encountered tons of obstacles since we started. Let us mention some. To maintain the mutual independency of each project, we separate the WebSocket connections into different channels. We carefully protect the data structure when users enter and leave the project. Furthermore, displaying file structure of the project is also a tough task, let alone rename, addition, and deletion. We utilize recursive render to display the tree structures, and also recursively modify them. Last but not least, CSS has long been a hard part, we develop an SOP of debugging. The quintessence is to change the background color of each block.
-
-Through developing Skrik, we have gone through the procedure of setting up website in detail and have gathered lots of sense of accomplishment.
 ## Contribution
 * 翁瑋襄 (jill880829) leader
     * Frontend pages
