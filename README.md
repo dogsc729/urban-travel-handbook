@@ -2,7 +2,7 @@
 # 題目 : 都市旅行手札(GROUP 24)
 #### Explore Six Municipality Of Taiwan With Our Application!
 ## Links
-* [Demo Video](https://youtu.be/hy1TVrDzkAU)
+* [Demo Video](https://www.youtube.com/watch?fbclid=IwAR2FDx6Op8PasfRtinzsz8aGrjLn6RqEnWTvIkcA1XOujpTlnt-YBOglrgs&v=Pe1jGced9VY&feature=youtu.be)
 * [Explore Six Municipality Of Taiwan](https://dogsc729.github.io/1091ntueewebprog_group24/)
 * [Github](https://github.com/dogsc729/1091ntueewebprog_group24)
 
