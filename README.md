@@ -15,9 +15,6 @@
     另外也可以配合googlemap來規劃自己的路線。
 ## Usage
 ### Local
-```bash=
-git clone https://github.com/jill880829/Skrik
-```
 * Overall
 
     - simply run `yarn` to install packages.
