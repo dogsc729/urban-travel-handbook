@@ -25,11 +25,27 @@
     - run `yarn server` under the main directory 
 
 * Frontend
+
     - run `yarn start` under the main directory
+
 * Get Started
+
     - Press `Start your trip!`
-    
-    ![](https://imgur.com/d225d07)
+    ![](https://i.imgur.com/d225d07.png)
+
+* Choose a city
+
+    - Select `台北` or `新北` or `桃園` or `台中` or `台南` or `高雄`
+    ![](https://i.imgur.com/tHDxCpv.png)
+
+* Choose a type
+
+    - Select `食` or `住` or `景點` or `球場`
+    ![](https://i.imgur.com/LLKsV5I.png)
+
+* Get informations you need!
+
+    ![](https://i.imgur.com/BlNSy8Q.png)
 ## 相關技術
 * Frontend
     - react
