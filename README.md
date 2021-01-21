@@ -44,38 +44,38 @@
     - mongodb atlas
 ## Contribution
 * 林書宇
-    * Frontend pages
-        * Editor (Text)
-    * Communication
-        * Broadcast
-        * Deal with buffers of textarea and send to backend 
+    * Frontend
+        * Embed googlemap API
+        * Basic structure of pages
     * Backend
-        * DB Management
-        * Backend APIs
-        * Save data to DB
+        * Database Schema construction
+        * Connect database to server
+        * axios design
 * 連威翔
-    * Frontend pages
-        * Profile
-        * Editor (Hybrid)
-        * Structure
-    * Communication
-        * Broadcast
-        * Fetch data from backend and Page switching
+    * Frontend
+        * pages switching management
+        * web layouts
     * Backend
-        * Save data to DB
+        * Save data to database
+        * 資料收集
 * 林昱宏
-    * CSS design (All)
-    * Frontend pages
-        * Login/Register
-        * Profile
-        * Project/Modal
-        * Editor (Cursor)
-    * Router
+    * 資料收集
 
 ## 心得
 * 林書宇
+    ```
+    這次開發這個專案的時間有點緊湊，我覺得非常可惜，
+    理想
+    ```
 
 * 連威翔
+    ```
+    開發一個期末專題真的滿不容易的，不但要功能齊全，
+    也要有能吸引人的網頁畫面，過程中也遇到許多困難，
+    但最後做出了一個網路服務，很有成就感。
+    這次找的資料不夠多，
+    希望之後可以再搜集到更多資料推薦給大家
+    ```
 * 林昱宏
     ```
     開發一個期末專題真的滿不容易的，即便功能齊全，一個吸引人的網頁，
