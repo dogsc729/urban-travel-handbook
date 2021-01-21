@@ -4,12 +4,18 @@ const http = require('http')//require(): include module
 const express = require('express')
 const mongoose = require('mongoose')
 const WebSocket = require('ws')
+const path = require('path')
 
 const Message = require('./models/message')
 //server side
 const app = express()
 const server = http.createServer(app)//建立server
 const wss = new WebSocket.Server({ server })
+app.use(express.static(path.join(__dirname, 'build')))
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 if (!process.env.MONGO_URL) {
   console.error('Missing MONGO_URL!!!')
@@ -49,7 +55,7 @@ db.once('open', () => {
       })
   })
 
-  const PORT = process.env.port || 4000
+  const PORT = process.env.port || 80
 
   server.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`)
