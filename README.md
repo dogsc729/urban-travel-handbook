@@ -1,5 +1,5 @@
 # Web Programming - Final Project Report
-# 題目 : 程式旅行手札(GROUP 24)
+# 題目 : 都市旅行手札(GROUP 24)
 #### Explore Six Municipality Of Taiwan With Our Application!
 ## Links
 * [Demo Video](https://youtu.be/hy1TVrDzkAU)
@@ -41,6 +41,9 @@
     - dotenv
     - nodemon
 
+### Get Started
+    - Press `Start your trip!`
+    
 ### Database
     - mongodb atlas
 ## Contribution
