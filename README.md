@@ -23,15 +23,22 @@ git clone https://github.com/jill880829/Skrik
 * Frontend
     - run `yarn start` under the main directory
 ## 相關技術
-
-### Backend
+### Frontend
     - react
     - axios
     - antd
     - googlemap API
-### Frontend
+### Backend
+    - expresss
+    - babel
+    - mongoose
+    - http
+    - cors
+    - dotenv
+    - nodemon
 
-```
+### Database
+    - mongodb atlas
 ## Contribution
 * 林書宇
     * Frontend pages
