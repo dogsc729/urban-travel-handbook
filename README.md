@@ -28,6 +28,7 @@
     - run `yarn start` under the main directory
 * Get Started
     - Press `Start your trip!`
+    
     ![](https://imgur.com/d225d07)
 ## 相關技術
 * Frontend
