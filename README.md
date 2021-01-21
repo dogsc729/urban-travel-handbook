@@ -26,13 +26,16 @@
 
 * Frontend
     - run `yarn start` under the main directory
+* Get Started
+    - Press `Start your trip!`
+    -![](https://imgur.com/d225d07)
 ## 相關技術
-### Frontend
+* Frontend
     - react
     - axios
     - antd
     - googlemap API
-### Backend
+* Backend
     - expresss
     - babel
     - mongoose
@@ -41,10 +44,7 @@
     - dotenv
     - nodemon
 
-### Get Started
-    - Press `Start your trip!`
-    
-### Database
+* Database
     - mongodb atlas
 ## Contribution
 * 林書宇
@@ -74,7 +74,8 @@
     不過在這段時間中我也很快整合了前後端的技術，
     資料的傳輸模式也越來越清晰。希望在這次的專題之後，
     我更能夠掌握進行一個專案的流程以及相關技術，做出
-    更完善的專案。
+    更完善的專案，感謝老師幫我開了一扇網路服務的大門，
+    日後必會精進。
     ```
 
 * 連威翔
