@@ -53,5 +53,6 @@ db.once('open', () => {
 
   server.listen(PORT, () => {
     console.log(`Listening on http://localhost:${PORT}`)
+    console.log(process.env.PORT)
   })
 })//連線成功

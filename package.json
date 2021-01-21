@@ -4,8 +4,7 @@
   "main": "index.js",
   "author": "dogsc729 <b07611033@ntu.edu.tw>",
   "license": "MIT",
-  "homepage": "https://dogsc729.github.io/1091ntueewebprog_group24/",
-  "scripts": {
+    "scripts": {
     "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
